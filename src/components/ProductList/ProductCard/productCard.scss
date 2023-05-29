@@ -1,0 +1,62 @@
+@import "../../../styles/variable.scss";
+@import "../../../styles/mixins.scss";
+
+
+.card{
+  position: relative;
+  width: 22%;
+  margin: 10px;
+  border: 1px solid $textSecondaryColor;
+  border-radius: 12px;
+  @include flex("flex","space-around");
+  
+  
+
+&__img {
+    width: 100px;
+    height: 100px;
+    padding-left: 70px;
+
+  img{
+    width: 100%;
+    height: 100%;
+    &:hover{
+      transform: scale(1.2);
+    }
+  }
+}
+
+&__title{
+max-width: 300px;
+  white-space: nowrap;
+  /* Mostrar el texto en un solo renglón */
+   overflow: hidden;
+  // /* Ocultar el texto que se desborda */
+  text-overflow: ellipsis;
+  /* Mostrar puntos suspensivos cuando el texto se desborda */
+}
+
+&__time-container{
+  position: absolute;
+    /* Agregar posicionamiento absoluto */
+    bottom: 1px;
+    /* Ajustar la distancia desde la parte inferior */
+    left: 10px;
+    /* Ajustar la distancia desde la parte izquierda */
+}
+
+//tablet
+@media (min-width: 451px) and (max-width: 850px) {
+  .card {
+    width: 35%;
+  }
+}
+
+// Desktop
+@media (min-width: 851px) {
+  .card {
+    width: 22%;
+  }
+}
+
+}

@@ -1,0 +1,21 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/globals.scss";
+
+.productlist{
+    border: 1px solid rgba(255, 0, 0, 0.13);
+    @include flex();
+    @extend .flex-wrap;
+}
+
+@media (min-width: 451px) and (max-width: 850px) {
+  .card-list {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 451px) {
+  .card-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
