@@ -8,7 +8,7 @@ export const Home = () => {
   const [products, setProducts] = useState([]);
 
   const context = useContext(Context);
-  console.log("**********",context)
+  //console.log("**********",context)
   
 
   // CONSUMIR API CON ASYNC AWAIT
@@ -18,7 +18,9 @@ export const Home = () => {
       const request = await fetch(url);
       const data = await request.json();
       setProducts(data)
-      console.log(data);
+      context.store.products = data;
+      context.redirectDetailsRoute = "/detail";
+      //console.log(data.data);
       return data.data;
     } catch (error) {
       return error;

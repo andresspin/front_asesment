@@ -5,7 +5,7 @@
    try {
      const request = await fetch(url);
      const data = await request.json();
-     console.log(data.data);
+     //console.log(data.data);
      return data.data;
    } catch (error) {
      return error;

@@ -1,10 +1,10 @@
 import React from "react";
 
 export const initialContext = {
-  products: {
-    data: [],
+  store: {
+    products: [],
   },
 
-  redirectDetailsRoute: "",
+  redirectDetailsRoute:"",
 };
 export const Context = React.createContext(initialContext);

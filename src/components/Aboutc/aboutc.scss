@@ -1,0 +1,60 @@
+// Importar variables y mixins
+@import '../../styles/variable.scss';
+@import '../../styles/mixins.scss';
+
+// Estilos para el componente About
+.about-page {
+    background-color: $mainColor;
+    color: $textPrimaryColor;
+    padding: 20px;
+
+    h2 {
+        color: $textPrimaryColor;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: $textPrimaryColor;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        color: $textPrimaryColor;
+        margin-bottom: 10px;
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    a {
+        color: $textPrimaryColor;
+        text-decoration: underline;
+
+        &:hover {
+            color: $secondaryColor;
+        }
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+
+    .list-item {
+        margin-bottom: 5px;
+    }
+
+    .codepen-image {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    // Aplicar mixin flex
+    .flex-container {
+        @include flex();
+    }
+}
